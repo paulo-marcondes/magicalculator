@@ -1,0 +1,122 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       
+<script>
+
+        /* function mana() {
+                    var magics = parseInt(document.getElementById("magics").value);
+                    var c1 = parseInt(document.getElementById("c1").value) * 1;
+                    var c2 = parseInt(document.getElementById("c2").value) * 2;
+                    var c3 = parseInt(document.getElementById("c3").value) * 3;
+                    var c4 = parseInt(document.getElementById("c4").value) * 4;
+                    var c5 = parseInt(document.getElementById("c5").value) * 5;
+                    var c6 = parseInt(document.getElementById("c6").value) * 6;
+                    var c7 = parseInt(document.getElementById("c7").value) * 7;
+                    var c8 = parseInt(document.getElementById("c8").value) * 8;
+                    var c9 = parseInt(document.getElementById("c9").value) * 9;
+                    var c10 = parseInt(document.getElementById("c10").value) * 10;
+
+                    var result = c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8 + c9 + c10;
+                    var mana = result / magics;
+
+                    document.querySelector('#mana').innerHTML = mana;
+                }; */
+        
+        function calc(){
+            
+            var c1 = parseInt(document.getElementById("c1").value);
+            var c2 = parseInt(document.getElementById("c2").value);
+            var c3 = parseInt(document.getElementById("c3").value);
+            var c4 = parseInt(document.getElementById("c4").value);
+            var c5 = parseInt(document.getElementById("c5").value);
+
+    var mana = parseInt(document.getElementById("total").value);
+    var tsymbols = c1 + c2 + c3 + c4 + c5;
+
+    var whiteresult = c1 * mana / tsymbols;
+    var blueresult = c2 * mana / tsymbols;
+    var blackresult = c3 * mana / tsymbols;
+    var redresult = c4 * mana / tsymbols;
+    var greenresult = c5 * mana / tsymbols;
+
+
+document.querySelector('#mana').innerHTML = whiteresult;
+document.querySelector('#mana1').innerHTML = blueresult;
+document.querySelector('#mana2').innerHTML = blackresult;
+document.querySelector('#mana3').innerHTML = redresult;
+document.querySelector('#mana4').innerHTML = greenresult;
+
+};
+
+/*
+
+                Somar todos os símbolos na variavel X
+                resultado da cor é igual ao cX * total de mana / total de símbolos
+                for (var i = 8 ; i < 13; i++) {
+    console.log(i);
+}
+
+i += 3 (conta de 3 em 3)
+i -= 3 (conta de 3 em 3 diminuindo)
+i-- (diminui em 1)
+        
+        }; */
+
+</script>
+
+<style>
+span{
+    font-weight: bold;
+}
+</style>
+    </head>
+     <body>
+         <header> 
+    <h1>MTG Land Calculator</h1>
+
+  </header>
+
+<main>
+  <form method="post">
+    <label><img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/3/37/Land_symbol.svg?version=5a6f2e13e2d7bbe0b1cb55dc02097f13" width="30" height="30"></label>
+    <input type="text" id="total"/><br/>
+    
+    <label> <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/8e/W.svg?version=11772c4efa4429ef88440ddc5def3ea4" width="30" height="30"></label>
+    <input type="text" id="c1" /><br />
+    
+    <label><img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/9/9f/U.svg?version=2f07eb7bc9ddde8871780985892dc8a4" width="30" height="30"></label>
+    <input type="text" id="c2"  /> <br />
+    
+    <label><img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/2/2f/B.svg?version=c7c8aa236529839ccb52f0ad5309539d" width="30" height="30"></label>
+    <input type="text" id="c3"  /> <br />
+    
+    <label><img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/87/R.svg?version=14d2b1a08418ff49a418753a64e2968b" width="30" height="30"></label>
+    <input type="text" id="c4"  /> <br />
+
+    <label><img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/88/G.svg?version=817d36b07ac967fe84ff14d9e553428b" width="30" height="30"></label> 
+    <input type="text" id="c5"  /> <br />
+
+    <input id="clickMe" type="button" value="Go!" onclick="calc();" />
+  </form>
+
+  <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/8e/W.svg?version=11772c4efa4429ef88440ddc5def3ea4" width="30" height="30"> White:<span id="mana"> </span>
+  <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/9/9f/U.svg?version=2f07eb7bc9ddde8871780985892dc8a4" width="30" height="30"> Blue:<span id="mana1"> </span>
+  <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/2/2f/B.svg?version=c7c8aa236529839ccb52f0ad5309539d" width="30" height="30"> Black: <span id="mana2"> </span>
+  <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/87/R.svg?version=14d2b1a08418ff49a418753a64e2968b" width="30" height="30">Red: <span id="mana3"></span>
+  <img src="https://mtg.gamepedia.com/media/mtg.gamepedia.com/8/88/G.svg?version=817d36b07ac967fe84ff14d9e553428b" width="30" height="30">Green: <span id="mana4"> </span>
+ 
+
+</main>
+        
+    </body>
+</html>
